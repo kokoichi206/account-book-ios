@@ -20,3 +20,4 @@ identifier_name:
     - on
     - to
   reporter: "xcode"
+  allowed_symbols: "_"
