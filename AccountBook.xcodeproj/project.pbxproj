@@ -14,6 +14,11 @@
 		E152217A282963AA00B1162C /* AccountBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1522179282963AA00B1162C /* AccountBookTests.swift */; };
 		E1522184282963AA00B1162C /* AccountBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1522183282963AA00B1162C /* AccountBookUITests.swift */; };
 		E1522186282963AA00B1162C /* AccountBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1522185282963AA00B1162C /* AccountBookUITestsLaunchTests.swift */; };
+		E15221972833D4AF00B1162C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221962833D4AF00B1162C /* Config.swift */; };
+		E152219C2833D6D500B1162C /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152219B2833D6D500B1162C /* UserServiceProtocol.swift */; };
+		E152219F2833D75000B1162C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152219E2833D75000B1162C /* UserService.swift */; };
+		E15221A42833E90F00B1162C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E15221A32833E90F00B1162C /* Alamofire */; };
+		E15221A92835195600B1162C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221A82835195600B1162C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 		E152217F282963AA00B1162C /* AccountBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1522183282963AA00B1162C /* AccountBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBookUITests.swift; sourceTree = "<group>"; };
 		E1522185282963AA00B1162C /* AccountBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E15221962833D4AF00B1162C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E152219B2833D6D500B1162C /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		E152219E2833D75000B1162C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E15221A82835195600B1162C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15221A42833E90F00B1162C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +104,8 @@
 		E1522167282963A800B1162C /* AccountBook */ = {
 			isa = PBXGroup;
 			children = (
+				E15221982833D69A00B1162C /* Service */,
+				E15221952833D49200B1162C /* Utils */,
 				E1522168282963A800B1162C /* AccountBookApp.swift */,
 				E152216A282963A800B1162C /* ContentView.swift */,
 				E152216C282963AA00B1162C /* Assets.xcassets */,
@@ -127,6 +139,48 @@
 			path = AccountBookUITests;
 			sourceTree = "<group>";
 		};
+		E15221952833D49200B1162C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E15221962833D4AF00B1162C /* Config.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E15221982833D69A00B1162C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E15221A72835194D00B1162C /* Model */,
+				E152219A2833D6A300B1162C /* Impl */,
+				E15221992833D69E00B1162C /* Protocol */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E15221992833D69E00B1162C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E152219B2833D6D500B1162C /* UserServiceProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E152219A2833D6A300B1162C /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				E152219E2833D75000B1162C /* UserService.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		E15221A72835194D00B1162C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E15221A82835195600B1162C /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +198,9 @@
 			dependencies = (
 			);
 			name = AccountBook;
+			packageProductDependencies = (
+				E15221A32833E90F00B1162C /* Alamofire */,
+			);
 			productName = AccountBook;
 			productReference = E1522165282963A800B1162C /* AccountBook.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +273,9 @@
 				Base,
 			);
 			mainGroup = E152215C282963A800B1162C;
+			packageReferences = (
+				E15221A22833E90F00B1162C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E1522166282963A800B1162C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -252,6 +312,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
 		E152216328296EA800B1162C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -278,7 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E152216B282963A800B1162C /* ContentView.swift in Sources */,
+				E152219F2833D75000B1162C /* UserService.swift in Sources */,
+				E15221A92835195600B1162C /* User.swift in Sources */,
 				E1522169282963A800B1162C /* AccountBookApp.swift in Sources */,
+				E152219C2833D6D500B1162C /* UserServiceProtocol.swift in Sources */,
+				E15221972833D4AF00B1162C /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +670,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E15221A22833E90F00B1162C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E15221A32833E90F00B1162C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E15221A22833E90F00B1162C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E152215D282963A800B1162C /* Project object */;
 }
