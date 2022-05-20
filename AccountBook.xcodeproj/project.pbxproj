@@ -19,6 +19,12 @@
 		E152219F2833D75000B1162C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152219E2833D75000B1162C /* UserService.swift */; };
 		E15221A42833E90F00B1162C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E15221A32833E90F00B1162C /* Alamofire */; };
 		E15221A92835195600B1162C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221A82835195600B1162C /* User.swift */; };
+		E15221B0283527D800B1162C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221AF283527D800B1162C /* LoginViewModel.swift */; };
+		E15221B2283527E000B1162C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221B1283527E000B1162C /* LoginView.swift */; };
+		E15221B728352AC200B1162C /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221B628352AC200B1162C /* CustomInputField.swift */; };
+		E1879E792836A0C200A90646 /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E782836A0C200A90646 /* KeyBoard.swift */; };
+		E1879E7E2837DED200A90646 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E7D2837DED200A90646 /* Colors.swift */; };
+		E1879E812837E78B00A90646 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E802837E78B00A90646 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		E152219B2833D6D500B1162C /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		E152219E2833D75000B1162C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E15221A82835195600B1162C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E15221AF283527D800B1162C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E15221B1283527E000B1162C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E15221B628352AC200B1162C /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		E1879E782836A0C200A90646 /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
+		E1879E7D2837DED200A90646 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E1879E802837E78B00A90646 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +116,7 @@
 		E1522167282963A800B1162C /* AccountBook */ = {
 			isa = PBXGroup;
 			children = (
+				E15221AD2835279800B1162C /* Core */,
 				E15221982833D69A00B1162C /* Service */,
 				E15221952833D49200B1162C /* Utils */,
 				E1522168282963A800B1162C /* AccountBookApp.swift */,
@@ -142,6 +155,7 @@
 		E15221952833D49200B1162C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E1879E7F2837DF8800A90646 /* Extensions */,
 				E15221962833D4AF00B1162C /* Config.swift */,
 			);
 			path = Utils;
@@ -179,6 +193,42 @@
 				E15221A82835195600B1162C /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E15221AD2835279800B1162C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E15221B528352AB100B1162C /* Components */,
+				E15221AE2835279E00B1162C /* Auth */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E15221AE2835279E00B1162C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E15221AF283527D800B1162C /* LoginViewModel.swift */,
+				E15221B1283527E000B1162C /* LoginView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E15221B528352AB100B1162C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E15221B628352AC200B1162C /* CustomInputField.swift */,
+				E1879E782836A0C200A90646 /* KeyBoard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E1879E7F2837DF8800A90646 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1879E7D2837DED200A90646 /* Colors.swift */,
+				E1879E802837E78B00A90646 /* View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,12 +388,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1879E812837E78B00A90646 /* View.swift in Sources */,
+				E15221B728352AC200B1162C /* CustomInputField.swift in Sources */,
 				E152216B282963A800B1162C /* ContentView.swift in Sources */,
 				E152219F2833D75000B1162C /* UserService.swift in Sources */,
 				E15221A92835195600B1162C /* User.swift in Sources */,
+				E1879E792836A0C200A90646 /* KeyBoard.swift in Sources */,
+				E1879E7E2837DED200A90646 /* Colors.swift in Sources */,
 				E1522169282963A800B1162C /* AccountBookApp.swift in Sources */,
 				E152219C2833D6D500B1162C /* UserServiceProtocol.swift in Sources */,
 				E15221972833D4AF00B1162C /* Config.swift in Sources */,
+				E15221B2283527E000B1162C /* LoginView.swift in Sources */,
+				E15221B0283527D800B1162C /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
