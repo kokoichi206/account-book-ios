@@ -23,12 +23,12 @@ struct LoginView: View {
 
             VStack(spacing: 40) {
                 CustomInputField(imageName: "envelope",
-                                 placeholderText: "Email",
+                                 placeholderText: NSLocalizedString("emailPlaceholder", comment: ""),
                                  isSecureField: false,
                                  text: $email)
 
                 CustomInputField(imageName: "lock",
-                                 placeholderText: "Password",
+                                 placeholderText: NSLocalizedString("passwordPlaceholder", comment: ""),
                                  isSecureField: true,
                                  text: $password)
             }
@@ -41,7 +41,7 @@ struct LoginView: View {
                 NavigationLink {
                     Text("Reset Password view...")
                 } label: {
-                    Text("Forgot Password?")
+                    Text("forgotPassword")
                         .font(.caption)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.accentGreen)
@@ -53,7 +53,7 @@ struct LoginView: View {
             Button {
                 viewModel.login(withEmail: email, password: password)
             } label: {
-                Text("Sign In")
+                Text("signIn")
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
@@ -65,10 +65,10 @@ struct LoginView: View {
             NavigationLink {
             } label: {
                 HStack {
-                    Text("Don't have an account?")
+                    Text("askHaveAccount")
                         .font(.footnote)
 
-                    Text("Sign Up")
+                    Text("signUp")
                         .font(.footnote)
                         .fontWeight(.semibold)
                 }
