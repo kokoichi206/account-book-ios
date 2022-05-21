@@ -11,5 +11,12 @@
 "passwordPlaceholder" = "Password";
 "forgotPassword" = "Forgot Password";
 "signIn" = "Sign In";
-"askHaveAccount" = "Don't have an account?";
+"askHaveNotAccount" = "Don't have an account?";
 "signUp" = "Sign Up";
+
+// Sign up view
+"next" = "next";
+"usernamePlaceholder" = "User Name";
+"agePlaceholder" = "Age (optional)";
+"balancePlaceholder" = "Balance (optional)";
+"askHaveAccount" = "Have an account?";

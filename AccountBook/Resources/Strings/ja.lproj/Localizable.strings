@@ -11,5 +11,12 @@
 "passwordPlaceholder" = "パスワード";
 "forgotPassword" = "パスワードをお忘れですか？";
 "signIn" = "サインイン";
-"askHaveAccount" = "アカウントをお持ちでないですか？";
+"askHaveNotAccount" = "アカウントをお持ちでないですか？";
 "signUp" = "登録";
+
+// Sign up view
+"next" = "次へ";
+"usernamePlaceholder" = "ユーザー名";
+"agePlaceholder" = "年齢(任意)";
+"balancePlaceholder" = "貯金額(任意)";
+"askHaveAccount" = "アカウントをお持ちですか？";

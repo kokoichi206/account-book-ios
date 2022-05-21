@@ -21,60 +21,13 @@ struct LoginView: View {
         VStack {
             Spacer()
 
-            VStack(spacing: 40) {
-                CustomInputField(imageName: "envelope",
-                                 placeholderText: NSLocalizedString("emailPlaceholder", comment: ""),
-                                 isSecureField: false,
-                                 text: $email)
+            loginInfo
 
-                CustomInputField(imageName: "lock",
-                                 placeholderText: NSLocalizedString("passwordPlaceholder", comment: ""),
-                                 isSecureField: true,
-                                 text: $password)
-            }
-            .padding(.horizontal, 32)
-            .padding(.top, 44)
+            forgotPassword
 
-            HStack {
-                Spacer()
+            signInButton
 
-                NavigationLink {
-                    Text("Reset Password view...")
-                } label: {
-                    Text("forgotPassword")
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.accentGreen)
-                        .padding(.top)
-                        .padding(.trailing, 24)
-                }
-            }
-
-            Button {
-                viewModel.login(withEmail: email, password: password)
-            } label: {
-                Text("signIn")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .frame(width: 340, height: 50)
-                    .background(Color.darkGreen)
-                    .clipShape(Capsule())
-                    .padding()
-            }
-
-            NavigationLink {
-            } label: {
-                HStack {
-                    Text("askHaveAccount")
-                        .font(.footnote)
-
-                    Text("signUp")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                }
-            }
-            .padding(.bottom, 32)
-            .foregroundColor(Color.accentGreen)
+            askHaveNotAccountButton
         }
         .padding(.vertical, 32)
         .ignoresSafeArea()
@@ -82,6 +35,78 @@ struct LoginView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.backGround)
         .modifier(KeyBoard())
+    }
+}
+
+extension LoginView {
+    /// 基礎項目入力欄。
+    /// - メールアドレス
+    /// - パスワード
+    var loginInfo: some View {
+        VStack(spacing: 40) {
+            CustomInputField(imageName: "envelope",
+                             placeholderText: NSLocalizedString("emailPlaceholder", comment: ""),
+                             isSecureField: false,
+                             text: $email)
+
+            CustomInputField(imageName: "lock",
+                             placeholderText: NSLocalizedString("passwordPlaceholder", comment: ""),
+                             isSecureField: true,
+                             text: $password)
+        }
+        .padding(.horizontal, 32)
+        .padding(.top, 44)
+    }
+
+    /// パスワード忘れた場合の場面
+    var forgotPassword: some View {
+        HStack {
+            Spacer()
+
+            NavigationLink {
+                Text("Reset Password view...")
+            } label: {
+                Text("forgotPassword")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.accentGreen)
+                    .padding(.top)
+                    .padding(.trailing, 24)
+            }
+        }
+    }
+
+    /// サインインのボタン。
+    var signInButton: some View {
+        Button {
+            //                viewModel.login(withEmail: email, password: password)
+        } label: {
+            Text("signIn")
+                .font(.headline)
+                .foregroundColor(.white)
+                .frame(width: 340, height: 50)
+                .background(Color.darkGreen)
+                .clipShape(Capsule())
+                .padding()
+        }
+    }
+
+    /// 新規登録の画面に切り替えるボタン。
+    var askHaveNotAccountButton: some View {
+        NavigationLink {
+            SignUpView()
+        } label: {
+            HStack {
+                Text("askHaveNotAccount")
+                    .font(.footnote)
+
+                Text("signUp")
+                    .font(.footnote)
+                    .fontWeight(.semibold)
+            }
+        }
+        .padding(.bottom, 32)
+        .foregroundColor(Color.accentGreen)
     }
 }
 

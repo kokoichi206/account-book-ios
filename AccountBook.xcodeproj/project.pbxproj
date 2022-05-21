@@ -26,6 +26,8 @@
 		E1879E7E2837DED200A90646 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E7D2837DED200A90646 /* Colors.swift */; };
 		E1879E812837E78B00A90646 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E802837E78B00A90646 /* View.swift */; };
 		E1879E862837F05000A90646 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1879E882837F05000A90646 /* Localizable.strings */; };
+		E1879E8B283801A800A90646 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E8A283801A800A90646 /* SignUpView.swift */; };
+		E1879E8D283866E800A90646 /* CustomNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E8C283866E800A90646 /* CustomNumberField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		E1879E802837E78B00A90646 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E1879E872837F05000A90646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1879E892837F06200A90646 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E1879E8A283801A800A90646 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		E1879E8C283866E800A90646 /* CustomNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 			children = (
 				E15221AF283527D800B1162C /* LoginViewModel.swift */,
 				E15221B1283527E000B1162C /* LoginView.swift */,
+				E1879E8A283801A800A90646 /* SignUpView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			children = (
 				E15221B628352AC200B1162C /* CustomInputField.swift */,
 				E1879E782836A0C200A90646 /* KeyBoard.swift */,
+				E1879E8C283866E800A90646 /* CustomNumberField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -410,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1879E8D283866E800A90646 /* CustomNumberField.swift in Sources */,
 				E1879E812837E78B00A90646 /* View.swift in Sources */,
 				E15221B728352AC200B1162C /* CustomInputField.swift in Sources */,
 				E152216B282963A800B1162C /* ContentView.swift in Sources */,
@@ -418,6 +425,7 @@
 				E1879E792836A0C200A90646 /* KeyBoard.swift in Sources */,
 				E1879E7E2837DED200A90646 /* Colors.swift in Sources */,
 				E1522169282963A800B1162C /* AccountBookApp.swift in Sources */,
+				E1879E8B283801A800A90646 /* SignUpView.swift in Sources */,
 				E152219C2833D6D500B1162C /* UserServiceProtocol.swift in Sources */,
 				E15221972833D4AF00B1162C /* Config.swift in Sources */,
 				E15221B2283527E000B1162C /* LoginView.swift in Sources */,
