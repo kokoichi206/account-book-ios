@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  AccountBook
+
+  Created by Takahiro Tominaga on 2022/05/21.
+  
+*/
+
+// LoginView
+"emailPlaceholder" = "Email";
+"passwordPlaceholder" = "Password";
+"forgotPassword" = "Forgot Password";
+"signIn" = "Sign In";
+"askHaveNotAccount" = "Don't have an account?";
+"signUp" = "Sign Up";
+
+// Sign up view
+"next" = "next";
+"usernamePlaceholder" = "User Name";
+"agePlaceholder" = "Age (optional)";
+"balancePlaceholder" = "Balance (optional)";
+"askHaveAccount" = "Have an account?";
