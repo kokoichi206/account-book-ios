@@ -112,6 +112,11 @@ extension SignUpView {
             if !isDetailedView {
                 isDetailedView = true
             } else {
+                viewModel.register(withEmail: email,
+                                   password: password,
+                                   username: username,
+                                   age: age,
+                                   balance: balance)
             }
         } label: {
             Text(isDetailedView ? "signUp" : "next")

@@ -19,7 +19,7 @@
 		E152219F2833D75000B1162C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E152219E2833D75000B1162C /* UserService.swift */; };
 		E15221A42833E90F00B1162C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E15221A32833E90F00B1162C /* Alamofire */; };
 		E15221A92835195600B1162C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221A82835195600B1162C /* User.swift */; };
-		E15221B0283527D800B1162C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221AF283527D800B1162C /* LoginViewModel.swift */; };
+		E15221B0283527D800B1162C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221AF283527D800B1162C /* AuthViewModel.swift */; };
 		E15221B2283527E000B1162C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221B1283527E000B1162C /* LoginView.swift */; };
 		E15221B728352AC200B1162C /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15221B628352AC200B1162C /* CustomInputField.swift */; };
 		E1879E792836A0C200A90646 /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E782836A0C200A90646 /* KeyBoard.swift */; };
@@ -28,6 +28,7 @@
 		E1879E862837F05000A90646 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E1879E882837F05000A90646 /* Localizable.strings */; };
 		E1879E8B283801A800A90646 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E8A283801A800A90646 /* SignUpView.swift */; };
 		E1879E8D283866E800A90646 /* CustomNumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E8C283866E800A90646 /* CustomNumberField.swift */; };
+		E1879E9028387F0100A90646 /* UserDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1879E8F28387F0100A90646 /* UserDomain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,7 @@
 		E152219B2833D6D500B1162C /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
 		E152219E2833D75000B1162C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E15221A82835195600B1162C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E15221AF283527D800B1162C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E15221AF283527D800B1162C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		E15221B1283527E000B1162C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E15221B628352AC200B1162C /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		E1879E782836A0C200A90646 /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		E1879E892837F06200A90646 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E1879E8A283801A800A90646 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E1879E8C283866E800A90646 /* CustomNumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberField.swift; sourceTree = "<group>"; };
+		E1879E8F28387F0100A90646 /* UserDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDomain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		E1522167282963A800B1162C /* AccountBook */ = {
 			isa = PBXGroup;
 			children = (
+				E1879E8E28387EF500A90646 /* Model */,
 				E1879E822837F01600A90646 /* Resources */,
 				E15221AD2835279800B1162C /* Core */,
 				E15221982833D69A00B1162C /* Service */,
@@ -215,7 +218,7 @@
 		E15221AE2835279E00B1162C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				E15221AF283527D800B1162C /* LoginViewModel.swift */,
+				E15221AF283527D800B1162C /* AuthViewModel.swift */,
 				E15221B1283527E000B1162C /* LoginView.swift */,
 				E1879E8A283801A800A90646 /* SignUpView.swift */,
 			);
@@ -255,6 +258,14 @@
 				E1879E882837F05000A90646 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		E1879E8E28387EF500A90646 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1879E8F28387F0100A90646 /* UserDomain.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,12 +435,13 @@
 				E15221A92835195600B1162C /* User.swift in Sources */,
 				E1879E792836A0C200A90646 /* KeyBoard.swift in Sources */,
 				E1879E7E2837DED200A90646 /* Colors.swift in Sources */,
+				E1879E9028387F0100A90646 /* UserDomain.swift in Sources */,
 				E1522169282963A800B1162C /* AccountBookApp.swift in Sources */,
 				E1879E8B283801A800A90646 /* SignUpView.swift in Sources */,
 				E152219C2833D6D500B1162C /* UserServiceProtocol.swift in Sources */,
 				E15221972833D4AF00B1162C /* Config.swift in Sources */,
 				E15221B2283527E000B1162C /* LoginView.swift in Sources */,
-				E15221B0283527D800B1162C /* LoginViewModel.swift in Sources */,
+				E15221B0283527D800B1162C /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

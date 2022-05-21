@@ -79,7 +79,7 @@ extension LoginView {
     /// サインインのボタン。
     var signInButton: some View {
         Button {
-            //                viewModel.login(withEmail: email, password: password)
+            viewModel.login(withEmail: email, password: password)
         } label: {
             Text("signIn")
                 .font(.headline)
